@@ -1,5 +1,6 @@
 asgiref
 crispy-bootstrap5
+dj-database-url
 Django
 django-crispy-forms
 django-email
@@ -9,6 +10,7 @@ numpy
 opencv-contrib-python
 pillow
 psycopg2
+psycopg2-binary
 PyAutoGUI
 PyGetWindow
 PyMsgBox
@@ -17,4 +19,5 @@ PyRect
 PyScreeze
 pytweening
 sqlparse
+typing_extensions
 tzdata
