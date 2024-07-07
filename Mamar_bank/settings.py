@@ -109,15 +109,17 @@ WSGI_APPLICATION = 'Mamar_bank.wsgi.application'
 
 
 
-import dj_database_url
-DATABASES = {
-    'default': dj_database_url.config(
-        # Replace this value with your local database's connection string.
-        default='postgresql://mamarbank_3tql_user:d4pRGr2HvtIvM8cbQ33076ykJv0sN2yC@dpg-cq5d2euehbks73bnanig-a.oregon-postgres.render.com/mamarbank_3tql',
-        
-    )
-}
 
+# DATABASES = {
+#     'default': dj_database_url.config(
+#         # Replace this value with your local database's connection string.
+#         default='postgresql://mamarbank_3tql_user:d4pRGr2HvtIvM8cbQ33076ykJv0sN2yC@dpg-cq5d2euehbks73bnanig-a.oregon-postgres.render.com/mamarbank_3tql',
+        
+#     )
+# }
+import os
+
+DATABASES = {'default': dj_database_url.config(default=os.environ.get('postgresql://mamarbank_3tql_user:d4pRGr2HvtIvM8cbQ33076ykJv0sN2yC@dpg-cq5d2euehbks73bnanig-a.oregon-postgres.render.com/mamarbank_3tql',))}
 
 
 
