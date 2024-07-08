@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'core',
     'transactions',
     'django.contrib.humanize',
+     
 ]
 
 MIDDLEWARE = [

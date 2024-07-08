@@ -237,6 +237,10 @@ class TransferView(FormView):
         Transaction_reciver.save()
 
         messages.success(self.request, 'Transfer successful.')
+        send_transaction_email(self.request.user, amount, "Transfer", "transactions/transfer_messages.html")
+
+        send_transaction_email(recipient_account.user, amount, "Received", "transactions/received_email.html")
+
         
         return super().form_valid(form)
     
