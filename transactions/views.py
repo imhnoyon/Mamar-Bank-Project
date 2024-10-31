@@ -204,18 +204,14 @@ class TransferView(FormView):
     def form_valid(self, form):
         account_number = form.cleaned_data['account_number']
         amount = form.cleaned_data['amount']
-        
         user_account = self.request.user.account
-        
         if amount > user_account.balance:
             messages.error(self.request, 'Transfer amount is greater than available balance.')
             return redirect('transfer')  
-        
         recipient_account = UserBankAccount.objects.filter(account_No=account_number).first()
         if not recipient_account:
             messages.error(self.request, 'Recipient account not found.')
             return redirect('transfer') 
-        
         recipient_account.balance += amount
         user_account.balance -= amount
         recipient_account.save()
@@ -227,7 +223,6 @@ class TransferView(FormView):
               balance_after_transaction=user_account.balance
          )
         Transaction_sender.save()
-
         Transaction_reciver=Transactions(
               account=recipient_account,
               transaction_type=RECEIVED_MONEY,
@@ -235,13 +230,9 @@ class TransferView(FormView):
               balance_after_transaction=recipient_account.balance
          )
         Transaction_reciver.save()
-
         messages.success(self.request, 'Transfer successful.')
         send_transaction_email(self.request.user, amount, "Transfer", "transactions/transfer_messages.html")
-
         send_transaction_email(recipient_account.user, amount, "Received", "transactions/received_email.html")
-
-        
         return super().form_valid(form)
     
     
@@ -249,8 +240,8 @@ def Bank(request):
     result=Bankrupt.objects.all()
     for i in result:
         print(i)
-
     return render(request,'bankrupt.html')
+
 
 
 

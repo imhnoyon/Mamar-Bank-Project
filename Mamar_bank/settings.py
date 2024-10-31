@@ -22,7 +22,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # Your secret key
-SECRET_KEY = env("SECRET_KEY")
+# SECRET_KEY = env("SECRET_KEY")
+SECRET_KEY='django-insecure-0#tl7jbu8$v#@l1tczms*c^uegqz7&6m+_2vpf^j2b^z2e944f'
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
@@ -34,6 +35,7 @@ SECRET_KEY = env("SECRET_KEY")
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
+# ALLOWED_HOSTS=[]
 CSRF_TRUSTED_ORIGINS = ['https://mamar-bank-project-6ggd.onrender.com']
 
 # Application definition
@@ -84,14 +86,14 @@ WSGI_APPLICATION = 'Mamar_bank.wsgi.application'
 
 
 # Database
-# https://docs.djangoproject.com/en/5.0/ref/settings/#databases
+# https://docs.djangoproject.com/en/5.0/ref/settings/    #databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 
 
@@ -109,12 +111,12 @@ WSGI_APPLICATION = 'Mamar_bank.wsgi.application'
 # }
 
 
-DATABASES = {
-    'default': dj_database_url.config(
-        # Feel free to alter this value to suit your needs.
-        default='postgresql://mamarbank_3tql_user:d4pRGr2HvtIvM8cbQ33076ykJv0sN2yC@dpg-cq5d2euehbks73bnanig-a.oregon-postgres.render.com/mamarbank_3tql',
-    )
-}
+# DATABASES = {
+#     'default': dj_database_url.config(
+#         # Feel free to alter this value to suit your needs.
+#         default='postgresql://mamarbank_3tql_user:d4pRGr2HvtIvM8cbQ33076ykJv0sN2yC@dpg-cq5d2euehbks73bnanig-a.oregon-postgres.render.com/mamarbank_3tql',
+#     )
+# }
 
 
 
