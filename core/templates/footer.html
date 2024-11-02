@@ -1,4 +1,4 @@
-<footer style="background-color: #367c30;" class="footer text-white relative border-b-2 mt-10">
+{% comment %} <footer style="background-color: #1f5f79c9;" class="footer text-white relative border-b-2 mt-10">
     <div class="container mx-auto px-6">
         <div class="mt-5 flex flex-col items-center">
             <div class="sm:w-2/3 text-center py-0 pb-2">
@@ -8,4 +8,71 @@
             </div>
         </div>
     </div>
+</footer>  {% endcomment %}
+
+<!-- Footer HTML -->
+<footer class="bg-teal-700 text-white py-10">
+    <div class="container mx-auto px-4 lg:px-6">
+        <div class="flex flex-col lg:flex-row lg:justify-between lg:space-x-8">
+            
+            <!-- About Section -->
+            <div class="mb-8 lg:mb-0 lg:w-1/4">
+                <h4 class="text-lg font-semibold mb-3">About Us</h4>
+                <p class="text-sm">
+                    We provide top-notch services to our customers.<br> Your satisfaction is our priority.
+                </p>
+            </div>
+
+            <!-- Quick Links Section -->
+            <div class="mb-8 lg:mb-0 lg:w-1/4">
+                <h4 class="text-lg font-semibold mb-3">Quick Links</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:underline">Home</a></li>
+                    <li><a href="#" class="hover:underline">Services</a></li>
+                    <li><a href="#" class="hover:underline">Contact</a></li>
+                    <li><a href="#" class="hover:underline">FAQ</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Section -->
+            <div class="mb-8 lg:mb-0 lg:w-1/4">
+                <h4 class="text-lg font-semibold mb-3">Contact Us</h4>
+                <p class="text-sm">Email: noyonhasan320@gmail.com</p>
+                <p class="text-sm">Phone: +8801771662408</p>
+            </div>
+
+            <!-- Social Media Icons -->
+            <div class="lg:w-1/4">
+                <h4 class="text-lg font-semibold mb-3">Follow Us</h4>
+                <div class="flex space-x-4">
+                    <a href="https://www.facebook.com/imhnoyon" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gray-300">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gray-300">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gray-300">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/imhnoyon/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gray-300">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Section -->
+        <div class="mt-8 text-center border-t border-gray-400 pt-4">
+            <p class="text-sm font-bold">
+                © {% now "Y" %} Created by Mahedi Hasan Noyon. All rights reserved.
+            </p>
+        </div>
+    </div>
 </footer>
+
+
+
+
+
+
+
