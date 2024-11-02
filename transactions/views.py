@@ -199,7 +199,7 @@ class LoanListView(LoginRequiredMixin,ListView):
 class TransferView(FormView):
     template_name = 'transactions/transfer.html'
     form_class = TransactionForms
-    success_url = reverse_lazy('transaction_report')  
+    success_url = reverse_lazy('home')  
 
     def form_valid(self, form):
         account_number = form.cleaned_data['account_number']
